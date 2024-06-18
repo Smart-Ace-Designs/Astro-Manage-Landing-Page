@@ -1,0 +1,81 @@
+---
+import Image from "astro/components/Image.astro";
+import Social from "./Social.astro";
+
+import logoWhite from "@/images/logo-white.svg";
+---
+
+<footer class="bg-veryDarkBlue">
+  <div
+    class="container mx-auto flex flex-col-reverse justify-between space-y-8 px-6 py-10 md:flex-row md:space-y-0"
+  >
+    <div
+      class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:items-start md:space-y-0"
+    >
+      <div class="mx-auto my-6 text-center text-white md:hidden">
+        Copyright &copy; 2024, All Rights Reserved
+      </div>
+      <div>
+        <Image src={logoWhite} alt="logo" height="32" />
+      </div>
+      <div class="flex justify-center space-x-4">
+        <Social
+          link="https://www.facebook.com"
+          image="/src/images/icon-facebook.svg"
+          alt="facebook"
+        />
+        <Social
+          link="https://www.youtube.com"
+          image="/src/images/icon-youtube.svg"
+          alt="youtube"
+        />
+        <Social
+          link="https://www.x.com"
+          image="/src/images/icon-twitter.svg"
+          alt="twitter"
+        />
+        <Social
+          link="https://www.pinterest.com"
+          image="/src/images/icon-pinterest.svg"
+          alt="pinterest"
+        />
+        <Social
+          link="https://www.instagram.com"
+          image="/src/images/icon-instagram.svg"
+          alt="instagram"
+        />
+      </div>
+    </div>
+    <div class="flex justify-around space-x-32">
+      <div class="flex flex-col space-y-3 text-white">
+        <a href="/" class="hover:text-brightRead">Home</a>
+        <a href="/" class="hover:text-brightRead">Pricing</a>
+        <a href="/" class="hover:text-brightRead">Products</a>
+        <a href="/" class="hover:text-brightRead">About</a>
+      </div>
+      <div class="flex flex-col space-y-3 text-white">
+        <a href="/" class="hover:text-brightRead">Careers</a>
+        <a href="/" class="hover:text-brightRead">Community</a>
+        <a href="/" class="hover:text-brightRead">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between">
+      <form>
+        <div class="flex space-x-3">
+          <input
+            type="text"
+            class="flex-1 rounded-full px-4 focus:outline-none"
+            placeholder="Updated in your inbox"
+          />
+          <button
+            class="rounded-full bg-brightRed px-6 py-2 text-white hover:bg-brightRedLight focus:outline-none"
+            >Go</button
+          >
+        </div>
+      </form>
+      <div class="hidden text-white md:block">
+        Copyright &copy; 2024, All Rights Reserved
+      </div>
+    </div>
+  </div>
+</footer>

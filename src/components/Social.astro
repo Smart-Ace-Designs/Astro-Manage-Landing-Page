@@ -1,0 +1,21 @@
+---
+import Image from "astro/components/Image.astro";
+
+interface Props {
+  link: string;
+  image: string;
+  alt: string;
+}
+
+const { link, image, alt } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>("@/images/*.svg");
+
+if (!images[image])
+  throw new Error(`"${image}" does not exist in glob: "@/images/*.svg}"`);
+---
+
+<div class="flex justify-center space-x-4">
+  <a href={link} target="_blank" referrerpolicy="no-referrer"
+    ><Image src={images[image]()} alt={alt} height="32" /></a
+  >
+</div>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  label: string;
+  link: string;
+  classes?: string;
+}
+
+const { label, link, classes } = Astro.props;
+---
+
+<a
+  href={link}
+  class:list={[
+    classes,
+    "rounded-full bg-brightRed p-3 px-6 pt-2 align-baseline text-white hover:bg-brightRedLight",
+  ]}>{label}</a
+>
