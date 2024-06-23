@@ -8,10 +8,10 @@ interface Props {
 }
 
 const { link, image, alt } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>("@/images/*.svg");
+const images = import.meta.glob<{ default: ImageMetadata }>("@/assets/*.svg");
 
 if (!images[image])
-  throw new Error(`"${image}" does not exist in glob: "@/images/*.svg}"`);
+  throw new Error(`"${image}" does not exist in glob: "@/assets/*.svg}"`);
 ---
 
 <div class="flex justify-center space-x-4">

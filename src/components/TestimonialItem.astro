@@ -10,10 +10,10 @@ interface Props {
 }
 
 const { avatar, author, content, classes } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>("@/images/*.png");
+const images = import.meta.glob<{ default: ImageMetadata }>("@/assets/*.png");
 
 if (!images[avatar])
-  throw new Error(`"${avatar}" does not exist in glob: "@/images/*.png}"`);
+  throw new Error(`"${avatar}" does not exist in glob: "@/assets/*.png}"`);
 ---
 
 <div
