@@ -1,8 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
 import Social from "./Social.astro";
-
-import logoWhite from "@/assets/logo-white.svg";
 ---
 
 <footer class="bg-veryDarkBlue">
@@ -16,7 +13,7 @@ import logoWhite from "@/assets/logo-white.svg";
         Copyright &copy; 2024, All Rights Reserved
       </div>
       <div>
-        <Image src={logoWhite} alt="logo" height="32" />
+        <img src="/logo-white.svg" alt="Logo" />
       </div>
       <div class="flex justify-center space-x-4">
         <Social

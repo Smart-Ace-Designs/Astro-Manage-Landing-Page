@@ -1,13 +1,11 @@
 ---
 import NavButton from "./NavButton.astro";
-import Image from "astro/components/Image.astro";
-import logo from "@/assets/logo.svg";
 ---
 
 <nav class="container relative mx-auto p-6">
   <div class="flex items-center justify-between">
     <div class="pt-2">
-      <Image src={logo} alt="Manage" loading={"eager"} />
+      <img src="/logo.svg" alt="Manage" />
     </div>
     <div class="hidden space-x-6 md:flex">
       <a href="/" class="hover:text-darkGrayishBlue">Pricing</a>
