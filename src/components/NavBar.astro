@@ -2,7 +2,7 @@
 import NavButton from "./NavButton.astro";
 ---
 
-<nav class="container relative mx-auto p-6">
+<nav class="relative container mx-auto p-6">
   <div class="flex items-center justify-between">
     <div class="pt-2">
       <img src="/logo.svg" alt="Manage" />
@@ -26,7 +26,7 @@ import NavButton from "./NavButton.astro";
 <div class="md:hidden">
   <div
     id="menu"
-    class="spacy-y-6 absolute left-6 right-6 mt-10 hidden flex-col items-center self-end bg-white py-8 font-bold drop-shadow-md sm:w-auto sm:self-center"
+    class="spacy-y-6 absolute right-6 left-6 mt-10 hidden flex-col items-center self-end bg-white py-8 font-bold drop-shadow-md sm:w-auto sm:self-center"
   >
     <a href="/" class="hover:text-theme-dark-grayish-blue">Pricing</a>
     <a href="/" class="hover:text-theme-dark-grayish-blue">Product</a>
@@ -37,11 +37,13 @@ import NavButton from "./NavButton.astro";
 </div>
 
 <script>
-  const btn = document.getElementById("menu-btn") as HTMLButtonElement;
-  const nav = document.getElementById("menu") as HTMLDivElement;
-  btn.addEventListener("click", () => {
-    btn.classList.toggle("open");
-    nav.classList.toggle("flex");
-    nav.classList.toggle("hidden");
+  document.addEventListener("astro:page-load", () => {
+    const btn = document.getElementById("menu-btn") as HTMLButtonElement;
+    const nav = document.getElementById("menu") as HTMLDivElement;
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("open");
+      nav.classList.toggle("flex");
+      nav.classList.toggle("hidden");
+    });
   });
 </script>

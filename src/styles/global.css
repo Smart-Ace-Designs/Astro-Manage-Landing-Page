@@ -1,6 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1440px;
+
+  --color-theme-bright-red: hsl(12, 88%, 59%);
+  --color-theme-bright-red-light: hsl(12, 88%, 69%);
+  --color-theme-bright-red-sup-light: hsl(12, 88%, 95%);
+  --color-theme-dark-grayish-blue: hsl(227, 12%, 61%);
+  --color-theme-very-dark-blue: hsl(233, 12%, 13%);
+  --color-theme-very-light-gray: hsl(0, 0%, 93%);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 body {
   background-image: url("/bg-tablet-pattern.svg");
