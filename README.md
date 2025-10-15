@@ -1,3 +1,7 @@
-# Astro Blastro
+# Frontend Mentor | Manage Landing Page
 
-An Astro project using Tailwind CSS based on the [YouTube Tailwind CSS Tutorial](https://www.youtube.com/watch?v=dFgzHOX84xQ) by Brad Traversy.
+A solution to the [Manage Landing Page](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5) challenge from Frontend Mentor.
+
+> **Credit:**
+> Original solution by [Brad Travery](https://www.youtube.com/watch?v=dFgzHOX84xQ).  
+> Adapted to use Astro component-based design with Tailwind CSS v4.
